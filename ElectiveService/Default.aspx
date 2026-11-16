@@ -101,12 +101,12 @@
                     <td>Kyle Kim</td>
                     <td>HashLib.dll (class library)</td>
                     <td class>
-                        <p>Hashes a PW with SHA-256 and checks a typed PW against a stored hash.</p>
+                        <p>Hashes a password with SHA-256 and checks a typed password against a stored hash.</p>
                         <p>Inputs: password string + a stored hash for the check.</p>
                         <p>Output: a lowercase hex hash string, or true/false for the check.</p>
                     </td>
-                    <td>PasswordHasher.Hash(string) and PasswordHasher.Verify(string, string) using System.Security.Cryptography.SHA256. Used on Default.aspx and for member/staff login.</td>
-                    <td></td>
+                    <td>PasswordHasher.Hash(string) and PasswordHasher.Verify(string, string) using System.Security.Cryptography.SHA256. Used on kyleTryIt.aspx, and will be used for member/staff login.</td>
+                    <td><a href="<%= ResolveUrl("~/kyleTryIt.aspx#hash") %>">TryIt</a></td>
                 </tr>
                 <tr>
                     <td>Kyle Kim</td>
@@ -114,10 +114,32 @@
                     <td class>
                         <p>Shows a 5-character CAPTCHA image and checks what the user types.</p>
                         <p>Input: the typed text.</p>
-                        <p>Output: true/false, shown as “Correct” or “Incorrect”.</p>
+                        <p>Output: true/false, shown as Correct or Incorrect.</p>
                     </td>
-                    <td>The .ashx draws a 150x50 PNG with System.Drawing and stores the code in Session[&quot;captcha&quot;]. Verify() compares the typed text to the session value. Used on the login page.</td>
-                    <td></td>
+                    <td>The .ashx draws a 150x50 PNG with System.Drawing and stores the code in Session[&quot;captcha&quot;]. Verify() compares the typed text to the session value. Used on kyleTryIt.aspx, and will be used on the login page.</td>
+                    <td><a href="<%= ResolveUrl("~/kyleTryIt.aspx#captcha") %>">TryIt</a></td>
+                </tr>
+                <tr>
+                    <td>Kyle Kim</td>
+                    <td>WCF service (WebDownloadService.svc)</td>
+                    <td class>
+                        <p>Returns the content of a web page.</p>
+                        <p>Input: String (url)</p>
+                        <p>Output: String (the page text, or an ERROR message)</p>
+                    </td>
+                    <td>WebClient with a User-Agent header, only http and https addresses are accepted. Deployed on WebStrar and called with ChannelFactory (BasicHttpBinding) from kyleTryIt.aspx.</td>
+                    <td><a href="<%= ResolveUrl("~/kyleTryIt.aspx#download") %>">TryIt</a></td>
+                </tr>
+                <tr>
+                    <td>Kyle Kim</td>
+                    <td>RESTful service (Top10Service.svc)</td>
+                    <td class>
+                        <p>Returns the 10 most frequent stemmed content words of a web page.</p>
+                        <p>Input: String (url)</p>
+                        <p>Output: String[] in JSON</p>
+                    </td>
+                    <td>WebClient, regex markup stripping, a stop word list and a simple suffix stemmer. Called with WebClient from kyleTryIt.aspx.</td>
+                    <td><a href="<%= ResolveUrl("~/kyleTryIt.aspx#top10") %>">TryIt</a></td>
                 </tr>
                 <tr>
                     <td>Sushant Vissa</td>

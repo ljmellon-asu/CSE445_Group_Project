@@ -49,6 +49,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -166,6 +167,23 @@
     <Compile Include="cookieStemTryIt.aspx.designer.cs">
       <DependentUpon>cookieStemTryIt.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CaptchaImage.ashx.cs">
+      <DependentUpon>CaptchaImage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="kyleTryIt.aspx.cs">
+      <DependentUpon>kyleTryIt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="kyleTryIt.aspx.designer.cs">
+      <DependentUpon>kyleTryIt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CaptchaControl.ascx.cs">
+      <DependentUpon>CaptchaControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CaptchaControl.ascx.designer.cs">
+      <DependentUpon>CaptchaControl.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -223,12 +241,24 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HashLib\HashLib.csproj">
+      <Name>HashLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebDownloadingService\WebDownloadingService.csproj">
+      <Project>{04DFF527-E514-4490-BB8D-944834253A3E}</Project>
+      <Name>WebDownloadingService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="cookieStemTryIt.aspx" />
+    <Content Include="CaptchaImage.ashx" />
+    <Content Include="kyleTryIt.aspx" />
+    <Content Include="UserControl\CaptchaControl.ascx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

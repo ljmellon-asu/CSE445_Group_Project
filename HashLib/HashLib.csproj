@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Local component (DLL class library) for final project -->
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <RootNamespace>HashLib</RootNamespace>
+    <AssemblyName>HashLib</AssemblyName>
+  </PropertyGroup>
+
+</Project>
