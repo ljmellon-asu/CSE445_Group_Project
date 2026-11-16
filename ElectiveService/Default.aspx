@@ -119,6 +119,36 @@
                     <td>The .ashx draws a 150x50 PNG with System.Drawing and stores the code in Session[&quot;captcha&quot;]. Verify() compares the typed text to the session value. Used on the login page.</td>
                     <td></td>
                 </tr>
+                <tr>
+                    <td>Sushant Vissa</td>
+                    <td>Cookie module (CookieHelper.cs class)</td>
+                    <td class>
+                        <p>A browser cookie to save the users inputted favorite movie genre, the time and date they stored it and their username. This information can be retrieved whenever the user returns to the application</p>
+                        <p>Inputs: String(username) + String(favoritegenre) Outputs: Saved username, favorite genre and data/time saved</p>
+                    </td>
+                        <td>Uses CookieHelper.SaveProfile and CookieHelper.GetProfile Alongside System.Web.HttpCookie, Response.Cookies, Request.Cookies. Used in MoviePreferences.ascx</td>
+                        <td><a href="<%= ResolveUrl("~/cookieStemTryIt.aspx#preferences") %>">TryIt</a></td>
+                </tr>
+                <tr>
+                    <td>Sushant Vissa</td>
+                    <td>MoviePreferences.ascx (user control)</td>
+                    <td class>
+                        <p>An interface where users will enter a username, their favorite movie genre and save their selections and will also display when it was saved</p>
+                        <p>Inputs: String (username), String (selected genre) Outputs: Displays the saved username, genre, and date</p>
+                    </td>
+                        <td>ASP.NET TextBox and DropDownList, Button, Label controls with C# code. btnSave_Click() allows for saving user information using cookies, and btnRead_Click() retrieves information. Used on cookieStemTryIt.aspx</td>
+                        <td><a href="<%= ResolveUrl("~/cookieStemTryIt.aspx#preferences") %>">TryIt</a></td>
+                    </tr>
+                <tr>
+                    <td>Sushant Vissa</td>
+                    <td>RESTful Service (stemming)</td>
+                    <td class>
+                        <p>This service will take a inputted text and converts infected or derived words into their root words</p>
+                        <p>Input: string text Output: string</p>
+                    </td>
+                        <td>C# string manipulation, stemming algorithm and WCF rest service</td>
+                        <td><a href="<%= ResolveUrl("~/cookieStemTryIt.aspx#preferences") %>">TryIt</a></td>
+                </tr>
             </tbody>
         </table>
     </div>
