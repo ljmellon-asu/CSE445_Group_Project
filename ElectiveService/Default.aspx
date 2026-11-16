@@ -87,6 +87,17 @@
                     <td><a href="<%= ResolveUrl("~/logTryIt.aspx") %>">TryIt</a></td>
                 </tr>
                 <tr>
+                    <td>Lauren Mellon</td>
+                    <td>User Control</td>
+                    <td class>
+                        A login component that can be reused in different pages of the application 
+                        - validates that the user entered a username and password.</td>
+                    <td>
+                        This component will be used on the member and staff page, uses required field validator from the visual studio toolbox.
+                    </td>
+                    <td><a href="<%= ResolveUrl("~/loginUserControlTryIt.aspx") %>">TryIt</a></td>
+                </tr>
+                <tr>
                     <td>Kyle Kim</td>
                     <td>HashLib.dll (class library)</td>
                     <td class>
